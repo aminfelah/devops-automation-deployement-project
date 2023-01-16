@@ -1,0 +1,34 @@
+{
+  "name": "node-js-jwt-auth-mongodb",
+  "version": "1.0.0",
+  "description": "Node.js + MongoDB: JWT Authentication & Authorization",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "jwt",
+    "authentication",
+    "mongodb"
+  ],
+  "author": "amin",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.4.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.36.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.35.0",
+    "@opentelemetry/sdk-node": "^0.35.0",
+    "@opentelemetry/semantic-conventions": "^1.9.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.1",
+    "prom-client": "^14.1.1",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2"
+  }
+}

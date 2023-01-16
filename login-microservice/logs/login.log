@@ -1,0 +1,3 @@
+{"level":"info","message":"registring user attempt","request_id":"bc3d1bf5-5bd2-4aeb-ac9f-61fdb79a870f","service":"login-service","timestamp":"2023-01-15T20:52:19.680Z"}
+{"level":"error","message":"Error creating user","request_id":"bc3d1bf5-5bd2-4aeb-ac9f-61fdb79a870f","service":"login-service","timestamp":"2023-01-15T20:52:20.027Z"}
+{"level":"info","message":"sigingin user success","service":"login-service","timestamp":"2023-01-15T20:53:16.929Z"}

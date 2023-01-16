@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: song-api
+  labels:
+    app: song-api
+spec:
+  replicas: {{.Values.song.deployment.replicas}}
+  selector:
+    matchLabels:
+      app: song-api
+  template:
+    metadata:
+      labels:
+        app: song-api
+    spec:
+      containers:
+        - name: song-api-image
+          image: {{.Values.song.image.name}}
+          env:
+            - name: MONGOOSE_CONNECT
+              valueFrom:
+                secretKeyRef:
+                  name: song-api-secret
+                  key: mongodburl
+          imagePullPolicy: Always
+          ports:
+            - containerPort: {{.Values.song.http.port}}
+      imagePullSecrets:
+        - name: regcred

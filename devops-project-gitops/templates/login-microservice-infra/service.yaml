@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: login-api-service
+  labels:
+    app: login-api
+spec:
+  selector:
+    app: login-api
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  type: ClusterIP

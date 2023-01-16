@@ -1,0 +1,30 @@
+login:
+  deployment:
+    replicas: 3
+
+  image:
+    tag: latest
+    name: aminfelah/login-api-micro-service
+
+  http:
+    port: 8080
+song:
+  deployment:
+    replicas: 3
+
+  image:
+    tag: latest
+    name: aminfelah/song-api-micro-service
+
+  http:
+    port: 8089
+front:
+  deployment:
+    replicas: 2
+
+  image:
+    tag: latest
+    name: aminfelah/song-player-frontend-micro-service
+
+  http:
+    port: 80

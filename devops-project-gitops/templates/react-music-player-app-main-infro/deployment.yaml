@@ -1,0 +1,28 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: music-player-front
+  labels:
+    app: music-player-front
+spec:
+  replicas:  {{.Values.front.deployment.replicas}}
+  selector:
+    matchLabels:
+      app: music-player-front
+  template:
+    metadata:
+      labels:
+        app: music-player-front
+    spec:
+      containers:
+        - name: music-player-front-image
+          image: {{.Values.front.image.name}}
+          env:
+            - name: BACKEND_URL
+              valueFrom:
+                secretKeyRef:
+                  name: domain-name-secret
+                  key: backend-domain
+          imagePullPolicy: Always
+          ports:
+          - containerPort: {{.Values.front.http.port}}

@@ -1,0 +1,4 @@
+apiVersion: v2
+name: music-app
+description: Helm chart to install amin music app 
+version: 0.1.0

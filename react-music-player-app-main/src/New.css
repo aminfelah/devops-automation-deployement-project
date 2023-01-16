@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #071739;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: url("./box.png") repeat 0 0;
+  animation: background-scroll 6s infinite;
+  animation-timing-function: linear;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.music-player {
+  display: block;
+  padding: 50px;
+  border-radius: 9px;
+  background: -moz-linear-gradient(
+    top,
+    rgba(184, 183, 183, 0.65) 0,
+    rgba(51, 51, 51, 1) 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(51, 51, 51, 0.5)),
+    color-stop(100%, rgba(51, 51, 51, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(51, 51, 51, 0.65) 0,
+    rgba(51, 51, 51, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(51, 51, 51, 0.65) 0,
+    rgba(51, 51, 51, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(51, 51, 51, 0.65) 0,
+    rgba(51, 51, 51, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(51, 51, 51, 0.65) 0,
+    rgba(51, 51, 51, 1) 30%
+  );
+  align-items: center;
+}
+
+.music-player > h4 {
+  color: #c4125c;
+  text-shadow: 2px 2px #510202;
+  justify-content: center;
+  display: flex;
+  font-size: 2.5em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+}
+
+.music-player > h4:hover {
+  color: #fff;
+}
+
+.music-player > p {
+  color: #eee;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+  font-weight: 550;
+  text-align: center;
+}
+
+.music-player--details .details-img {
+  position: relative;
+  width: fit-content;
+  margin: 30px auto;
+  transition: all 0.5s;
+}
+
+.music-player--details .details-img img {
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 240px;
+  border-radius: 10%;
+  transition: all 0.5s;
+}
+
+.music-player--details .details-img img:hover {
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 240px;
+  border-radius: 50%;
+  box-shadow: 5px 5px rgba(98, 0, 41, 0.4), 10px 10px rgba(98, 0, 57, 0.3),
+    15px 15px rgba(98, 0, 57, 0.2), 20px 20px rgba(98, 0, 69, 0.1),
+    25px 25px rgba(98, 0, 33, 0.05);
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.music-player--details .details-title {
+  color: #eee;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.music-player--details .details-artist {
+  color: rgb(233, 101, 222);
+  font-size: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.music-player--controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.music-player--controls .play-btn {
+  display: flex;
+  margin: 0 30px;
+  padding: 30px;
+  border-radius: 20%;
+  border: none;
+  outline: none;
+  background-color: rgba(199, 82, 228, 0.9);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.play-btn:hover {
+  box-shadow: 1px 2px 40px rgba(54, 42, 42, 0.8);
+  transition: all 0.3s;
+}
+
+.music-player--controls .skip-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-size: 38px;
+  transition: all 0.4s;
+}
+
+.skip-btn:hover {
+  transform: scale(1.5);
+}
+
+.weirdShape {
+  width: 1000px;
+  height: 1005px;
+  position: absolute;
+  z-index: -1;
+  top: -23%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -500px;
+  border-radius: 37%;
+  background: rgba(255, 255, 255, 0.857);
+  animation: weirdShape 20s infinite linear;
+}
+
+@keyframes weirdShape {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floating {
+  0% {
+    bottom: 50%;
+    right: 10%;
+  }
+  50% {
+    bottom: 50%;
+    right: 50%;
+  }
+  100% {
+    bottom: 50%;
+    right: 90%;
+  }
+}
+
+.text-anim {
+  font-size: 23px;
+  font-weight: 550;
+  color: transparent;
+  text-align: center;
+  animation: effect 3s linear infinite;
+  padding-bottom: 20px;
+}
+
+.nextsong-details {
+  display: flex;
+  flex-direction: row;
+  padding: 1px;
+  margin-left: 40px;
+  height: 4em;
+}
+
+.nextsong-details img {
+  box-shadow: 5px 5px rgba(98, 0, 41, 0.4), 10px 10px rgba(98, 0, 57, 0.3),
+    15px 15px rgba(98, 0, 57, 0.2), 20px 20px rgba(98, 0, 69, 0.1),
+    25px 25px rgba(98, 0, 33, 0.05);
+}
+
+.nextsong-details p {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-left: 20px;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(129, 129, 129, 0.4);
+}
+
+@keyframes effect {
+  0% {
+    background: linear-gradient(#00806d, #00e5ff);
+    -webkit-background-clip: text;
+  }
+  25% {
+    background: linear-gradient(#005e80, #00aaff);
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: linear-gradient(#004480, #0073ff);
+    -webkit-background-clip: text;
+  }
+  75% {
+    background: linear-gradient(#0b0080, #7300ff);
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: linear-gradient(#3ce7d7, #000fff);
+    -webkit-background-clip: text;
+  }
+}
+
+@-webkit-keyframes background-scroll {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes background-scroll {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes background-scroll {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes background-scroll {
+  100% {
+    background-position: 50px 50px;
+  }
+}
