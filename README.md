@@ -85,7 +85,7 @@ STRUCTURE OF LOGS
 
 ![image](https://user-images.githubusercontent.com/60293387/212932857-aa755ed2-3c17-4854-943b-84e4149399c0.png)
 
-#  TRACES ( DATADOG and OPENTELEMETRY )
+#  TRACES ( DATADOG and OPENTELEMETRY ) auto instrumented
 ![image](https://user-images.githubusercontent.com/60293387/212933269-5ffed5d2-2d36-4e06-80e6-c0dd36552ba7.png)
 
 
