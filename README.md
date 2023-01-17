@@ -120,3 +120,9 @@ spec:
       autoPromotionEnabled: false ```
 ```
  THE BLUE GREEN DEPLOYEMENT DIDN'T WORK OUT 
+
+
+### AUTOMATIC PROVISIONING 
+
+## TERRAFORM MICRO STACKS (2 stacks to create cluster and to install helm sharts in the clusters itself) 
+![image](https://user-images.githubusercontent.com/60293387/212941648-8ad672ff-3dc4-4bf0-ac1e-45b72415b94f.png)
