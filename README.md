@@ -119,4 +119,4 @@ spec:
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: false ```
 ```
-
+ THE BLUE GREEN DEPLOYEMENT DIDN'T WORK OUT 
