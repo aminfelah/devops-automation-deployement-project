@@ -81,3 +81,11 @@ WE CAN PORTFORAWRD TO THE PROMETHEUS BY CREATING A TUNNEL (IF WE FOLLOW THE GOOD
 ![image](https://user-images.githubusercontent.com/60293387/212932245-6997b8b5-09d7-498f-915d-4430fb830ba5.png)
 STRUCTURE OF LOGS
 ![image](https://user-images.githubusercontent.com/60293387/212932410-e340c80d-7f50-4a13-b766-beae84f26f22.png)
+
+
+![image](https://user-images.githubusercontent.com/60293387/212932857-aa755ed2-3c17-4854-943b-84e4149399c0.png)
+
+#  TRACES ( DATADOG and OPENTELEMETRY )
+![image](https://user-images.githubusercontent.com/60293387/212933269-5ffed5d2-2d36-4e06-80e6-c0dd36552ba7.png)
+
+
