@@ -89,3 +89,34 @@ STRUCTURE OF LOGS
 ![image](https://user-images.githubusercontent.com/60293387/212933269-5ffed5d2-2d36-4e06-80e6-c0dd36552ba7.png)
 
 
+# HELM SHARDS
+WE USED 3 HELM SHARDS :
+
+- MUSIC APP 
+- PROMETHEUS ( to SET OUR VALUES WHEN INSTALLING PROMETHEUS HELM + SAVED THE OUTPUT )
+- DATADOGS ( to SET OUR VALUES WHEN INSTALLING DATA DOG ) 
+![image](https://user-images.githubusercontent.com/60293387/212935013-a025526a-7ad4-43ec-a0e1-87a27f643d2c.png)
+
+WE USE ALSO HELM SHARDS TO CHANGE BETWEEN DIFFERENT ENVIRONMENTS:
+- DEV 
+- TEST 
+- PROD 
+
+WE ALSO USE SHARDS VALUE TO PICK BETWEEN BETWEEN BLUE AND GREEN AS LABELS 
+![image](https://user-images.githubusercontent.com/60293387/212936047-8e856d71-d040-48f5-9224-4bb1511962e5.png)
+
+BECAUSE USED BLUE GREEN ROLL OUT ALL AT ONCE (TRIED  argoproj.io/v1alpha1) 
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: rollout-bluegreen
+spec:
+[...] # this part of the template is identical to a regular Deployment
+  strategy:
+    blueGreen: 
+      activeService: rollout-bluegreen-active
+      previewService: rollout-bluegreen-preview
+      autoPromotionEnabled: false ```
+```
+
