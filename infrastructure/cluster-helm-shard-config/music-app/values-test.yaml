@@ -3,10 +3,10 @@ login:
     replicas: 3
   build:
     color: green
-    environment: production
+    environment: test
   image:
     tag: latest
-    name: aminfelah/login-api-micro-service
+    name: aminfelah/login-api-micro-service-test
 
   http:
     port: 8080

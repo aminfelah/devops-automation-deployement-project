@@ -1,13 +1,9 @@
-kind: Deployment
-apiVersion: apps/v1
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
-  name: login-api
-  labels:
-    app: login-api
-    build-env: {{.Values.login.build.environment}}
-    release-color: {{.Values.login.build.color}}
+  name: rollout-bluegreen
 spec:
-  replicas: {{.Values.login.deployment.replicas}}
+  replicas: 3
   selector:
     matchLabels:
       app: login-api
@@ -22,7 +18,7 @@ spec:
     spec:
       containers:
         - name: login-api-image
-          image: {{.Values.login.image.name}}
+          image:  aminfelah/login-api-micro-service
           env:
             - name: MONGOOSE_CONNECT
               valueFrom:
@@ -39,4 +35,10 @@ spec:
               value: "login_service"
           imagePullPolicy: Always
           ports:
-            - containerPort: {{.Values.login.http.port}}
+            - containerPort: 8080
+
+  strategy:
+    blueGreen: 
+      activeService: rollout-bluegreen-active
+      previewService: rollout-bluegreen-preview
+      autoPromotionEnabled: false

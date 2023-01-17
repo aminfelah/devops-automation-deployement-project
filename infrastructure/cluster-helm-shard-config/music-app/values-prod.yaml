@@ -2,7 +2,7 @@ login:
   deployment:
     replicas: 3
   build:
-    color: green
+    color: blue
     environment: production
   image:
     tag: latest

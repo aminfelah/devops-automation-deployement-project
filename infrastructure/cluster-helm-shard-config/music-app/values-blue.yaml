@@ -2,8 +2,8 @@ login:
   deployment:
     replicas: 3
   build:
-    color: green
-    environment: production
+    color: blue
+    environment: test
   image:
     tag: latest
     name: aminfelah/login-api-micro-service
