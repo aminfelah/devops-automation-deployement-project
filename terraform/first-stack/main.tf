@@ -6,6 +6,7 @@ resource "azurerm_kubernetes_cluster" "terra-kubernetes-cluster" {
   name                = "my-second-cluster"
   location            = data.azurerm_resource_group.terra-resource.location
   resource_group_name = data.azurerm_resource_group.terra-resource.name
+  http_application_routing_enabled = true
   dns_prefix          = "kub-dns"
 
   default_node_pool {
