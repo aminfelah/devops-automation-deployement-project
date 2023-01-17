@@ -76,3 +76,8 @@ WE CAN PORTFORAWRD TO THE PROMETHEUS BY CREATING A TUNNEL (IF WE FOLLOW THE GOOD
 ![image](https://user-images.githubusercontent.com/60293387/212929910-afe957d4-6841-4fe4-a2e0-b298a7080b81.png)
 ![image](https://user-images.githubusercontent.com/60293387/212930654-ca15a6ff-9d55-4911-8c53-ebc4c6596ae1.png)
 
+
+# LOGS ( AGENT DATADOG ) + (WINSTON FROM THE APPLICATION CLIENT)
+![image](https://user-images.githubusercontent.com/60293387/212932245-6997b8b5-09d7-498f-915d-4430fb830ba5.png)
+STRUCTURE OF LOGS
+![image](https://user-images.githubusercontent.com/60293387/212932410-e340c80d-7f50-4a13-b766-beae84f26f22.png)
