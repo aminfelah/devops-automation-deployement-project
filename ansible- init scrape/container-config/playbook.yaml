@@ -1,0 +1,21 @@
+- name: WebserverPlaybook
+  hosts: webserver
+  become: true
+  tasks:
+    - name: Install BeautifulSoup python package
+      ansible.builtin.pip:
+        name: beautifulsoup4
+    - name: Install pandas python package
+      ansible.builtin.pip:
+        name: pandas
+    - name: Install request python package
+      ansible.builtin.pip:
+        name: requests
+    - name: Copy the script
+      template:
+        src: ./server/scrape-script.py
+        dest: /home/{{ ansible_user }}/scrape-script.py
+    - name: launch script  
+      ansible.builtin.command: python3 /home/{{ ansible_user }}/scrape-script.py
+    - name: log script  
+      ansible.builtin.command: echo "this script has finished"
