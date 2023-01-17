@@ -126,3 +126,30 @@ spec:
 
 ## TERRAFORM MICRO STACKS (2 stacks to create cluster and to install helm sharts in the clusters itself) 
 ![image](https://user-images.githubusercontent.com/60293387/212941648-8ad672ff-3dc4-4bf0-ac1e-45b72415b94f.png)
+
+WE ALSO AUTOMATED THE PROVISION OF A STAND ALONE VIRTUAL MACHINE THAT'S SUPPOSED TO RUN A PYTHON SCRIPT TO SCRAPE ALL SONGS DATA (NAME ARTIST IMAGE)
+
+WE ALSO AUTOMATED THE CONFIGURATION OF THAT MACHIBE USING ANSIBLE PLAYBOOK TO INSTALL ALL DEPENDANCIES FOR PYTHON AND RUNNING THE SCRIPT 
+```yaml 
+- name: WebserverPlaybook
+  hosts: webserver
+  become: true
+  tasks:
+    - name: Install BeautifulSoup python package
+      ansible.builtin.pip:
+        name: beautifulsoup4
+    - name: Install pandas python package
+      ansible.builtin.pip:
+        name: pandas
+    - name: Install request python package
+      ansible.builtin.pip:
+        name: requests
+    - name: Copy the script
+      template:
+        src: ./server/scrape-script.py
+        dest: /home/{{ ansible_user }}/scrape-script.py
+    - name: launch script  
+      ansible.builtin.command: python3 /home/{{ ansible_user }}/scrape-script.py
+    - name: log script  
+      ansible.builtin.command: echo "this script has finished"
+      ```
